@@ -1,11 +1,17 @@
 const btn = document.getElementById("btn");
 
+let loader = false;
+
 btn.addEventListener("click" , () =>{
+
+    loader = true;
 
      setTimeout(() =>{
          callApi();
      } , 3000);
-     
+
+     loader = false;
+
 });
 
 const callApi = () =>{
@@ -22,3 +28,5 @@ const callApi = () =>{
         .then(response => console.log(response))
         .catch(err => console.error(err));
 }
+
+document.write(loader == false ? "" : "loading");
