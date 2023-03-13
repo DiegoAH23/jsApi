@@ -2,6 +2,10 @@ const btn = document.getElementById("btn");
 
 btn.addEventListener("click" , () =>{
 
+     setTimeout(() =>{
+         callApi();
+     } , 3000);
+     
 });
 
 const callApi = () =>{
